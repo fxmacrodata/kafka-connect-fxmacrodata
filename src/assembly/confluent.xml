@@ -1,0 +1,13 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.2.0 https://maven.apache.org/xsd/assembly-2.2.0.xsd">
+<id>confluent</id><formats><format>zip</format></formats><includeBaseDirectory>true</includeBaseDirectory><baseDirectory>fxmacrodata-kafka-connect-fxmacrodata-0.1.0</baseDirectory>
+<files>
+<file><source>target/kafka-connect-fxmacrodata-0.1.0.jar</source><outputDirectory>lib</outputDirectory></file>
+<file><source>manifest.json</source><outputDirectory>/</outputDirectory></file>
+<file><source>LICENSE</source><outputDirectory>doc</outputDirectory></file>
+<file><source>README.md</source><outputDirectory>doc</outputDirectory></file>
+<file><source>CAPABILITIES.md</source><outputDirectory>doc</outputDirectory></file>
+<file><source>examples/event-context.sql</source><outputDirectory>etc</outputDirectory></file>
+<file><source>THIRD_PARTY_NOTICES.md</source><outputDirectory>doc</outputDirectory></file>
+<file><source>examples/usd-catalogue.json</source><outputDirectory>etc</outputDirectory></file>
+<file><source>examples/usd-history-and-calendar.json</source><outputDirectory>etc</outputDirectory></file>
+</files></assembly>

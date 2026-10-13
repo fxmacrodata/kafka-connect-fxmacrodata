@@ -1,0 +1,17 @@
+{
+  "name": "fxmacrodata-public-usd",
+  "config": {
+    "connector.class": "com.fxmacrodata.kafka.FxMacroDataSourceConnector",
+    "tasks.max": "2",
+    "streams": "[{\"operation\":\"indicator_history\",\"arguments\":{\"currency\":\"usd\",\"indicator\":\"policy_rate\"},\"topic\":\"fxmacrodata.usd.policy_rate\"},{\"operation\":\"release_calendar\",\"arguments\":{\"currency\":\"usd\"},\"topic\":\"fxmacrodata.usd.calendar\"}]",
+    "api.key.env": "",
+    "poll.interval.ms": "60000",
+    "batch.size": "500",
+    "max.pages": "1000",
+    "max.records": "100000",
+    "request.timeout.seconds": "30",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "true"
+  }
+}
